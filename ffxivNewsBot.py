@@ -57,10 +57,8 @@ def checkAndPost():
         artTitle = artTitle.strip()
         artUrl = ("https://na.finalfantasyxiv.com" + (soup2.find("a", {"href":re.compile("/lodestone/topics/detail/")})['href']))
         if len((soup2.find_all('p')[1].text)) > 10:
-            print (soup2.find_all('p')[1].text)
             artArt = (soup2.find_all('p')[1].text)
         else:
-            print (soup2.find_all('p')[2].text)
             artArt = (soup2.find_all('p')[2].text)
         if computeMD5hash(artTitle) in listSubTitlesMD5:
             pass
