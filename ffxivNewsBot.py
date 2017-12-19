@@ -9,13 +9,13 @@ import time
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-
+from apscheduler.schedulers.blocking import BlockingScheduler
 # Setting up data for the reddit api
-reddit = praw.Reddit(client_id='CXRzSmeVw_lx0g',
-                     client_secret='xfsMu3CiHNdGRmmAMnpoQZ5ROT0',
+reddit = praw.Reddit(client_id='xxxxx',
+                     client_secret='xxxxxx',
                      user_agent='sgBot/0.01 by 0xFF4501',
-                     username='0xFF4501',
-                     password='p4ssw0rd')
+                     username='xxxxx1',
+                     password='xxxx')
 
 # FFXIV news website
 ffxivLodeNewsUrl = "https://na.finalfantasyxiv.com/lodestone/news/"
@@ -52,6 +52,7 @@ def process_submission(submission, title, article):
 
 
 def checkAndPost():
+    hashSubTitles()
     for soup2 in soup3[::-1]:
         artTitle = (soup2.find_all('p')[0].text)
         artTitle = artTitle.strip()
@@ -68,8 +69,8 @@ def checkAndPost():
             for submission in reddit.subreddit('sgBotSub').new(limit=20):
                 process_submission(submission, artTitle, artArt)
                 break
-    time.sleep(300)
 
-while True:
-    checkAndPost()
+scheduler = BlockingScheduler()
+scheduler.add_job(checkAndPost(), 'interval', minutes=5)
+scheduler.start()
 
