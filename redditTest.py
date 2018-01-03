@@ -1,8 +1,8 @@
-# Your username is: 0xFF4501
-# Your password is: p4ssw0rd
-# Your app's client ID is: CXRzSmeVw_lx0g
-# Your app's client secret is: xfsMu3CiHNdGRmmAMnpoQZ5ROT0
-# {'access_token': '3rMymro3XS9CFFUJy0q2f9rUHYI', 'token_type': 'bearer', 'expires_in': 3600, 'scope': '*'}
+# Your username is: xxxxxx
+# Your password is: xxxxxx
+# Your app's client ID is: xxxxxx
+# Your app's client secret is: xxxxxx
+# {'access_token': 'xxxxxx', 'token_type': 'bearer', 'expires_in': 3600, 'scope': '*'}
 import requests
 import requests.auth
 import praw
