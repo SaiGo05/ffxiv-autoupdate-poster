@@ -7,18 +7,18 @@ import requests
 import requests.auth
 import praw
 import hashlib
-reddit = praw.Reddit(client_id='CXRzSmeVw_lx0g',
-                     client_secret='xfsMu3CiHNdGRmmAMnpoQZ5ROT0',
+reddit = praw.Reddit(client_id='xxxxxx',
+                     client_secret='xxxxxx',
                      user_agent='sgBot/0.01 by 0xFF4501',
-                     username='0xFF4501',
-                     password='p4ssw0rd')
+                     username='xxxxxx',
+                     password='xxxxxx')
 
-# client_auth = requests.auth.HTTPBasicAuth('CXRzSmeVw_lx0g', 'xfsMu3CiHNdGRmmAMnpoQZ5ROT0')
-# post_data = {"grant_type": "password", "username":"0xFF4501", "password":"p4ssw0rd"}
+# client_auth = requests.auth.HTTPBasicAuth('xxxxxx', 'xxxxxx')
+# post_data = {"grant_type": "password", "username":"xxxxxx", "password":"xxxxxx"}
 # headers = {"User-Agent":"sgBot/0.01 by 0xFF4501"}
 # response = requests.post("https://www.reddit.com/api/v1/access_token", auth=client_auth, data=post_data, headers=headers)
 # response.json()
-# headers = {"Authorization": "bearer 3rMymro3XS9CFFUJy0q2f9rUHYI", "User-Agent":"sgBot/0.01 by 0xFF4501"}
+# headers = {"Authorization": "bearer xxxxxx", "User-Agent":"sgBot/0.01 by 0xFF4501"}
 # response = requests.get("https://oauth.reddit.com/api/v1/me", headers=headers)
 # response.json()
 
