@@ -13,11 +13,11 @@ ffxivLodeNewsUrl = "https://na.finalfantasyxiv.com/lodestone/news/"
 soup = BeautifulSoup(urlopen(ffxivLodeNewsUrl), "html5lib")
 soup3= (soup.select('.news__list--topics'))
 
-reddit = praw.Reddit(client_id='CXRzSmeVw_lx0g',
-                     client_secret='xfsMu3CiHNdGRmmAMnpoQZ5ROT0',
+reddit = praw.Reddit(client_id='xxxxxx',
+                     client_secret='xxxxxx',
                      user_agent='sgBot/0.01 by 0xFF4501',
-                     username='0xFF4501',
-                     password='p4ssw0rd')
+                     username='xxxxxx',
+                     password='xxxxxx')
 
 # soup1= (soup.select('.news__list--topics')[0])
 #
